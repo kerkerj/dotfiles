@@ -106,19 +106,14 @@ Plugin 'ervandew/supertab'
 
 ## Some notes
 
-Mac apps
-
-* zsh + oh-ny-zsh
-  * zsh-syntax-highlighting (see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#with-oh-my-zsh)
-  * autojump
-  * ssh-agent
-  * theme: avit
+### Mac apps
 
 * Alfred 2
 * AppCleaner
 * Atom
 * Boom 2 (Not Free)
 * BatteryHealth
+* Burpsuite - An integrated platform for performing security testing of web applications. (https://portswigger.net/burp/)
 * DaisyDisk - 檢查磁碟用量分佈 (Not Free)
 * Dash - 離線查詢文件 (Not Free)
 * Docker - Docker Quick start Terminal.app, Kitematic.app
@@ -151,8 +146,38 @@ Mac apps
 * SSH Tunnel Manager
 * Sublime text
 * TeamViewer
+* Transmission - BT client.
 * Tunnelblck
+* Vagrant
 * VirtualBox
 * Wireshark
 * Xcode
-* XtraFinder
+* XtraFinder - Replacement of Mac Finder. (Need to disable SIP)
+
+* zsh + oh-ny-zsh
+  * zsh-syntax-highlighting (see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#with-oh-my-zsh)
+  * autojump
+  * ssh-agent
+  * theme: avit
+
+### hombrew (http://brew.sh/)
+
+* autojump - A cd command that learns - easily navigate directories from the command line http://wiki.github.com/joelthelion/autojump/
+* the_silver_searcher - ag quicker seacher
+* tig - Text-mode interface for git http://jonas.nitro.dk/tig/
+* tmate - Instant terminal sharing.
+* tree - a recursive directory listing command.
+* htop
+* vim
+* siege - a http load testing and benchmarking utility.
+* httpie - CLI HTTP client; user-friendly cURL replacement featuring intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc. http://httpie.org
+* ctags
+* watchman - watches files and takes action when they change.
+* wget
+* hugo
+* vegeta
+* swiftenv - Swift Version Manager
+* go
+* python3
+* neovim
+
