@@ -1,0 +1,199 @@
+" kerkerj's .vimrc, based on spf13-vim
+
+
+" =========================
+" Encoding Settings
+" =========================
+
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+set fileencoding=utf-8
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+
+" =========================
+" General Settings
+" =========================
+
+set nospell
+set nocompatible    " not compatible with the old-fashion vi mode
+set bs=2            " allow backspacing over everything in insert mode
+set history=50      " keep 50 lines of command line history
+set ruler           " show the cursor position all the time
+set autoread        " auto read when file is changed from outside
+set nu              " display line number
+set ts=4            " tabstop 4
+set wak=no          " disable GUI alt menu
+set noswapfile
+set list listchars=tab:»·,trail:·
+
+set shell=/bin/zsh
+
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+
+retab " this will cause all existing tabs to be expanded
+
+" --- auto reload vimrc when editing it
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+syntax on       " syntax highlight
+set hlsearch        " search highlighting
+
+" --- terminal color settings
+colors gruvbox
+set background=dark
+
+set clipboard=unnamed   " yank to the system register (*) by default
+set showmatch           " Cursor shows matching ) and }
+set showmode            " Show current mode
+set wildchar=<TAB>      " start wild expansion in the command line using <TAB>
+set wildmenu            " wild char completion menu
+
+" --- ignore these files while expanding wild chars
+set wildignore=*.o,*.class,*.pyc
+
+set autoindent      " auto indentation
+set incsearch       " incremental search
+set nobackup        " no *~ backup files
+set copyindent      " copy the previous indentation on autoindenting
+set ignorecase      " ignore case when searching
+set smartcase       " ignore case if search pattern is all lowercase,case-sensitive otherwise
+set smarttab        " insert tabs on the start of a line according to context
+
+" --- Disable sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" --- TAB setting{
+set expandtab        "replace <TAB> with spaces
+set softtabstop=4
+set shiftwidth=4
+au FileType Makefile set noexpandtab
+"}
+
+" --- Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" ---  Remove all trailing whitespace by pressing F2
+nnoremap <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>"
+
+" --- Restore cursor to file position in previous editing session
+"set viminfo='10,\"100,:20,%,n~/.viminfo
+"set viminfo='10,\"100,:20,%,n~/.viminfo
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" --- vim-indent-guide
+let g:indent_guides_start_level = 2
+"let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_color_change_percent = 5
+let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+
+" --- Startify
+let g:startify_change_to_vcs_root = 1
+let g:startify_custom_header = [
+\ '                  MMMM88&&&&&&&',
+\ '      *           MMM88&&&&&&&&',
+\ '                  MMM88&&&&&&&&',
+\ '                   MMM88&&&&&&',
+\ '                    `MMM8&&&`      *',
+\ '           |\___/|',
+\ '           )     (             .',
+\ '          =\     /=',
+\ '            )===(       *',
+\ '           /     \                  /|､',
+\ '           |     |                （ﾟ､ ｡7',
+\ '          /       \                 |､ ~＼',
+\ '          \       /                 じし_,)ノ..',
+\ '   _/\_/\_/\__  _/_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_',
+\ '   |  |  |  |( (  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |',
+\ '   |  |  |  | ) ) |  |      _             _             _   |',
+\ '   |  |  |  |(_(  |  |     | | _____ _ __| | _____ _ __(_)  |',
+\ '   |  |  |  |  |  |  |     | |/ / _ \  __| |/ / _ \  __| |  |',
+\ '   |  |  |  |  |  |  |     |   <  __/ |  |   <  __/ |  | |  |',
+\ '   |  |  |  |  |  |  |     |_|\_\___|_|  |_|\_\___|_| _/ |  |',
+\ '   |  |  |  |  |  |  |                                |__/  |',
+\ '   ==========================================================',
+\ '',
+\ ]
+
+
+" =========================
+" Ruby Settings
+" =========================
+
+autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead *.eyaml set filetype=yaml
+autocmd BufNewFile,BufRead *.cap set filetype=ruby
+
+
+" =========================
+" Custom Commands
+" =========================
+
+" --- `F5` NERDTree toggle
+nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
+
+" --- `<F6>` Copy to osx clipboard
+map <F6> :w !pbcopy<CR><CR>
+
+" --- `<F7>` tagbar toggle
+nnoremap <silent><F7> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
+" --- `<leader>/` - Turn off search highlighting
+nmap <leader>/ :set hlsearch! hlsearch?<CR>
+
+" --- `<leader>p` Toggles paste mode
+nmap <leader>p :set paste!<BAR>set paste?<CR>
+
+" --- allow multiple indentation/deindentation in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" --- `<leader>n` Rename current file
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
+" --- `<leader>g` generates the header guard
+map <leader>g :call IncludeGuard()<CR>
+fun! IncludeGuard()
+  let basename = substitute(bufname(""), '.*/', '', '')
+  let guard = '_' . substitute(toupper(basename), '\.', '_', "H")
+  call append(0, "#ifndef " . guard)
+  call append(1, "#define " . guard)
+  call append( line("$"), "#endif // for #ifndef " . guard)
+endfun
+
+" --- `<leader>b` vim-buffergator
+let g:buffergator_viewport_split_policy = "b"
+let g:buffergator_suppress_keymaps="1"
+let g:buffergator_autodismiss_on_select=1
+let g:buffergator_split_size=12
+let g:buffergator_autoupdate=1
+map <leader>b :BuffergatorToggle<cr>
+
+" --- vim-multiple-cursors
+" Map start key separately from next key
+let g:multi_cursor_start_key='<F4>'"
+let g:multi_cursor_exit_from_insert_mode = 0

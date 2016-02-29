@@ -1,0 +1,17 @@
+Bundle 'mattn/emmet-vim'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'mhinz/vim-startify'
+Bundle 'ervandew/supertab'
+"Bundle 'mtscout6/vim-cjsx'
+
+" Unbundle from Default spf13-vim
+UnBundle 'tpope/vim-haml'
+UnBundle 'tpope/vim-abolish.git'
+UnBundle 'mattn/webapi-vim'
+UnBundle 'mattn/gist-vim'
+UnBundle 'groenewege/vim-less'
+UnBundle 'bling/vim-bufferline'
+
+
