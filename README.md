@@ -117,10 +117,10 @@ Mac apps
 * Alfred 2
 * AppCleaner
 * Atom
-* Boom 2
+* Boom 2 (Not Free)
 * BatteryHealth
-* DaisyDisk - 檢查磁碟用量分佈
-* Dash - 離線查詢文件
+* DaisyDisk - 檢查磁碟用量分佈 (Not Free)
+* Dash - 離線查詢文件 (Not Free)
 * Docker - Docker Quick start Terminal.app, Kitematic.app
 * Dropbox
 * Evernote
@@ -129,18 +129,18 @@ Mac apps
 * HyperSwitch - Quick Switch while in command+tab mode
 * iTerm
 * iTerm2ColorSchema - http://iterm2colorschemes.com/
-* Karabiner - 外接鍵盤 mapping
+* Karabiner - A powerful and stable keyboard customizer for OS X.
 * Keka - 解壓縮工具
 * LimeChat - IRC gui client
-* Little Snitch 3 - Check network connections
+* Little Snitch 3 - Check network connections (Not Free)
 * LiveReload
 * MacDown - markdown editor
 * Memory Clean
 * MPlayerX
 * MySQLWorkbench - MySQL gui client
 * Nally - BBS client
-* pgAdmin3 - postgresql gui client
-* Postico - postgresql gui client
+* pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)
+* Postico - A Modern PostgreSQL Client for OS X. Free Version (https://eggerapps.at/postico/)
 * rdm.app - redis gui client
 * Robomongo - mongodb gui client
 * Seil
