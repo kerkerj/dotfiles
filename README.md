@@ -132,6 +132,7 @@ Mac apps
 * Karabiner - 外接鍵盤 mapping
 * Keka - 解壓縮工具
 * LimeChat - IRC gui client
+* Little Snitch 3 - Check network connections
 * LiveReload
 * MacDown - markdown editor
 * Memory Clean
