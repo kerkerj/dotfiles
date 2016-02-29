@@ -4,11 +4,13 @@ This is my stuffs.
 
 ## Install
 
-1. Install [spf13-vim](https://github.com/spf13/spf13-vim).
+1. Install neovim (https://github.com/neovim/homebrew-neovim)
 
-2. Clone this project.
+2. Install [spf13-vim](https://github.com/spf13/spf13-vim).
 
-3. Run `./install.sh`
+3. Clone this project.
+
+4. Run `./install.sh`
 
 `.vimrc.before.local`
 
@@ -24,6 +26,9 @@ Then choose fonts in iTerm2.
 
 My personal favorites: `Meslo LG S DZ Regular for powerline`, ``
 
+## Gruvbox issue (https://github.com/morhetz/gruvbox/wiki/Terminal-specific)
+
+Use neovim will fix anything!
 
 ## Just my notes below
 
