@@ -18,6 +18,8 @@ This is my stuffs.
 
 `.vimrc.local`
 
+I use [ gruvbox ](https://github.com/morhetz/gruvbox) as my vim colorschema
+
 ## Enable powerline font
 
 clone `https://github.com/powerline/fonts`, and run `./install.sh`
@@ -176,6 +178,7 @@ Plugin 'ervandew/supertab'
 * vim
 * siege - a http load testing and benchmarking utility.
 * httpie - CLI HTTP client; user-friendly cURL replacement featuring intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc. http://httpie.org
+* jq - json query
 * ctags
 * watchman - watches files and takes action when they change.
 * wget
@@ -185,4 +188,16 @@ Plugin 'ervandew/supertab'
 * go
 * python3
 * neovim
+
+## Some references
+
+http://harrycode.logdown.com/tags/Vim
+
+https://ruby-china.org/topics/25295
+
+## Some fonts
+
+* [powerline-fonts](https://github.com/powerline/fonts)
+* [fantasque-sans](https://github.com/belluzj/fantasque-sans)
+
 
