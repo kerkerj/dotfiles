@@ -53,6 +53,8 @@ Leader is set to `,` use `:let mapleader` to see current leader key
 * `<leader>g` - to generate the header guard
 * `<leader>b` - to toggler buffergator
 * `<C-J>`     - to auto insert snips
+* `<leader>ig` - toggle indent guide
+* `<leader><leader>w/b` - easymotion
 
 ## Plugin list
 

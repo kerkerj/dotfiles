@@ -138,6 +138,10 @@ autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.eyaml set filetype=yaml
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 
+" =========================
+" GolangSettings
+" =========================
+let g:go_fmt_command = "goimports"
 
 " =========================
 " Custom Commands
