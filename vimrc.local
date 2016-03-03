@@ -87,6 +87,9 @@ autocmd BufWinLeave * call clearmatches()
 " ---  Remove all trailing whitespace by pressing F2
 nnoremap <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>"
 
+" Set jj as <ESC>
+imap jj <Esc>
+
 " --- Restore cursor to file position in previous editing session
 "set viminfo='10,\"100,:20,%,n~/.viminfo
 "set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -94,12 +97,17 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
 " --- vim-indent-guide
 let g:indent_guides_start_level = 2
-"let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 5
 let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+
+" --- Ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " --- Startify
 let g:startify_change_to_vcs_root = 1
@@ -190,7 +198,7 @@ fun! IncludeGuard()
 endfun
 
 " --- `<leader>b` vim-buffergator
-let g:buffergator_viewport_split_policy = "b"
+let g:buffergator_viewport_split_policy = "B"
 let g:buffergator_suppress_keymaps="1"
 let g:buffergator_autodismiss_on_select=1
 let g:buffergator_split_size=12
