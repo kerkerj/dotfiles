@@ -28,6 +28,12 @@ Then choose fonts in iTerm2.
 
 My personal favorites: `Meslo LG S DZ Regular for powerline`, ``
 
+## Reload tmux configuration
+
+```
+$ tmux source-file ~/.tmux.conf
+```
+
 ## Gruvbox issue (https://github.com/morhetz/gruvbox/wiki/Terminal-specific)
 
 Use neovim will fix anything!

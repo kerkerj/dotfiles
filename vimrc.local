@@ -56,6 +56,7 @@ set wildmenu            " wild char completion menu
 set wildignore=*.o,*.class,*.pyc
 
 set autoindent      " auto indentation
+set smartindent     " smart indentation
 set incsearch       " incremental search
 set nobackup        " no *~ backup files
 set copyindent      " copy the previous indentation on autoindenting
