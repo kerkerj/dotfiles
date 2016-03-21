@@ -4,6 +4,7 @@ Bundle 'vim-airline/vim-airline-themes'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'mhinz/vim-startify'
 Bundle 'ervandew/supertab'
+Bundle 'morhetz/gruvbox'
 "Bundle 'mtscout6/vim-cjsx'
 
 " Unbundle from Default spf13-vim

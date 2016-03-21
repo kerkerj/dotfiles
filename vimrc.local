@@ -8,8 +8,8 @@
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 set fileencoding=utf-8
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+" source $VIMRUNTIME/delmenu.vim
+" source $VIMRUNTIME/menu.vim
 
 
 " =========================
@@ -26,7 +26,7 @@ set nu              " display line number
 set ts=4            " tabstop 4
 set wak=no          " disable GUI alt menu
 set noswapfile
-set list listchars=tab:»·,trail:·
+" set list listchars=tab:»·,trail:·
 
 set shell=/bin/zsh
 
@@ -41,10 +41,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 
 syntax on       " syntax highlight
 set hlsearch        " search highlighting
-
-" --- terminal color settings
-colors gruvbox
-set background=dark
 
 set clipboard=unnamed   " yank to the system register (*) by default
 set showmatch           " Cursor shows matching ) and }
@@ -157,46 +153,36 @@ let g:go_fmt_command = "goimports"
 " =========================
 
 " --- `F5` NERDTree toggle
-nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
+" nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
 
 " --- `<F6>` Copy to osx clipboard
-map <F6> :w !pbcopy<CR><CR>
+" map <F6> :w !pbcopy<CR><CR>
 
 " --- `<F7>` tagbar toggle
 nnoremap <silent><F7> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " --- `<leader>/` - Turn off search highlighting
-nmap <leader>/ :set hlsearch! hlsearch?<CR>
+" nmap <leader>/ :set hlsearch! hlsearch?<CR>
 
 " --- `<leader>p` Toggles paste mode
-nmap <leader>p :set paste!<BAR>set paste?<CR>
+" nmap <leader>p :set paste!<BAR>set paste?<CR>
 
 " --- allow multiple indentation/deindentation in visual mode
-vnoremap < <gv
-vnoremap > >gv
+" vnoremap < <gv
+" vnoremap > >gv
 
 " --- `<leader>n` Rename current file
-function! RenameFile()
-  let old_name = expand('%')
-  let new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    exec ':saveas ' . new_name
-    exec ':silent !rm ' . old_name
-    redraw!
-  endif
-endfunction
-map <leader>n :call RenameFile()<cr>
-
-" --- `<leader>g` generates the header guard
-map <leader>g :call IncludeGuard()<CR>
-fun! IncludeGuard()
-  let basename = substitute(bufname(""), '.*/', '', '')
-  let guard = '_' . substitute(toupper(basename), '\.', '_', "H")
-  call append(0, "#ifndef " . guard)
-  call append(1, "#define " . guard)
-  call append( line("$"), "#endif // for #ifndef " . guard)
-endfun
+" function! RenameFile()
+"   let old_name = expand('%')
+"   let new_name = input('New file name: ', expand('%'), 'file')
+"   if new_name != '' && new_name != old_name
+"     exec ':saveas ' . new_name
+"     exec ':silent !rm ' . old_name
+"     redraw!
+"   endif
+" endfunction
+" map <leader>n :call RenameFile()<cr>
 
 " --- `<leader>b` vim-buffergator
 let g:buffergator_viewport_split_policy = "B"
@@ -208,5 +194,10 @@ map <leader>b :BuffergatorToggle<cr>
 
 " --- vim-multiple-cursors
 " Map start key separately from next key
-let g:multi_cursor_start_key='<F4>'"
-let g:multi_cursor_exit_from_insert_mode = 0
+" let g:multi_cursor_start_key='<F4>'"
+" let g:multi_cursor_exit_from_insert_mode = 0
+
+" --- terminal color settings
+set t_Co=256
+colorscheme gruvbox
+set bg=dark
