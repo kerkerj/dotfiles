@@ -197,7 +197,13 @@ map <leader>b :BuffergatorToggle<cr>
 " let g:multi_cursor_start_key='<F4>'"
 " let g:multi_cursor_exit_from_insert_mode = 0
 
+" --- Enable true color
+" Install iTerm-nightly to use true color (I use brew cask to install.)
+" And tell NVIM to enable true color
+" https://github.com/morhetz/gruvbox/wiki/Terminal-specific#0-recommended-nvim_tui_enable_true_color1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 " --- terminal color settings
-set t_Co=256
+let g:gruvbox_italic=1
 colorscheme gruvbox
-set bg=dark
+set background=dark
