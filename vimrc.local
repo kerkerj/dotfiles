@@ -136,12 +136,12 @@ let g:startify_custom_header = [
 
 
 " =========================
-" Ruby Settings
+" Ruby/Javascripts Settings
 " =========================
-
-autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd FileType ruby,eruby,yaml,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.eyaml set filetype=yaml
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
+autocmd BufNewFile,BufRead *.coffee set filetype=javascript
 
 " =========================
 " GolangSettings
@@ -152,8 +152,12 @@ let g:go_fmt_command = "goimports"
 " Custom Commands
 " =========================
 
+" store session and restore it
+map <F3> :mksession! ~/vim_session <cr> " Quick write session with F3
+map <F4> :source ~/vim_session <cr>     " And load session with F4
+
 " --- `F5` NERDTree toggle
-" nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
+nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
 
 " --- `<F6>` Copy to osx clipboard
 " map <F6> :w !pbcopy<CR><CR>
@@ -185,12 +189,12 @@ let g:tagbar_autofocus = 1
 " map <leader>n :call RenameFile()<cr>
 
 " --- `<leader>b` vim-buffergator
-let g:buffergator_viewport_split_policy = "B"
-let g:buffergator_suppress_keymaps="1"
-let g:buffergator_autodismiss_on_select=1
-let g:buffergator_split_size=12
-let g:buffergator_autoupdate=1
-map <leader>b :BuffergatorToggle<cr>
+" let g:buffergator_viewport_split_policy = "B"
+" let g:buffergator_suppress_keymaps="1"
+" let g:buffergator_autodismiss_on_select=1
+" let g:buffergator_split_size=12
+" let g:buffergator_autoupdate=1
+" map <leader>b :BuffergatorToggle<cr>
 
 " --- vim-multiple-cursors
 " Map start key separately from next key
@@ -204,6 +208,20 @@ map <leader>b :BuffergatorToggle<cr>
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " --- terminal color settings
-let g:gruvbox_italic=1
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
+colorscheme base16-tomorrow
 set background=dark
+
+" Enable the list of buffers 
+let g:airline#extensions#tabline#enabled = 1 
+" Show just the filename 
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" For paste multiple times
+xnoremap p pgvy
+
+" Use Tab and arrow-key cycle through buffers
+nnoremap <Tab><Left> :bp<CR>
+nnoremap <Tab><Right> :bn<CR>
+
