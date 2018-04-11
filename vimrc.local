@@ -1,5 +1,6 @@
 " kerkerj's .vimrc, based on spf13-vim
 
+"set termguicolors
 
 " =========================
 " Encoding Settings
@@ -92,6 +93,10 @@ imap jj <Esc>
 "set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+augroup COFFEESCRIPT
+  autocmd BufRead,BufNewFile *.coffee set filetype=coffee
+augroup END
+
 " --- vim-indent-guide
 let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 0
@@ -103,7 +108,7 @@ let g:indent_guides_auto_colors = 0
 
 " --- Ack.vim
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
 endif
 
 " --- Startify
@@ -208,9 +213,9 @@ let g:tagbar_autofocus = 1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " --- terminal color settings
-" let g:gruvbox_italic=1
-" colorscheme gruvbox
-colorscheme base16-tomorrow
+"let g:gruvbox_italic=1
+colorscheme gruvbox
+" colorscheme base16-tomorrow
 set background=dark
 
 " Enable the list of buffers 
@@ -224,4 +229,45 @@ xnoremap p pgvy
 " Use Tab and arrow-key cycle through buffers
 nnoremap <Tab><Left> :bp<CR>
 nnoremap <Tab><Right> :bn<CR>
+map <silent><cr> :noh<cr>
 
+
+" ctrlp
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  " Use Ag over Grep
+  " let g:ackprg = 'ag --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
+  set grepprg=ag\ --nogroup\ --nocolor\ --skip-vcs-ignores
+  " Use ag in CtrlP for listing files.
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
+  let g:ctrlp_user_command = 'ag %s --nocolor -g "" --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
+  " Ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 1
+endif
+
+let g:ctrlp_regexp = 1
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] }
+let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|vendor\'
+
+" switch.vim
+let g:switch_mapping = "-"
+
+" turbux
+map <leader>r <Plug>SendFocusedTestToTmux
+let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
+
+" --- vim-turbux from ash
+" let g:no_turbux_mappings = 1
+" au Filetype ruby
+"     \ map <leader>t <Plug>SendTestToTmux |
+"     \ map <leader>r <Plug>SendFocusedTestToTmux |
+"     \ let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
+
+" au FileType go map <leader>t :Tmux go test<CR>
+
+" fzf
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf

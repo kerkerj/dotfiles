@@ -7,6 +7,11 @@ Bundle 'ervandew/supertab'
 Bundle 'morhetz/gruvbox'
 "Bundle 'mtscout6/vim-cjsx'
 Bundle 'chriskempson/base16-vim'
+Bundle 'elixir-editors/vim-elixir'
+Bundle 'AndrewRadev/switch.vim'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'martinda/Jenkinsfile-vim-syntax'
 
 " Unbundle from Default spf13-vim
 UnBundle 'tpope/vim-haml'
