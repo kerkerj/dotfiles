@@ -6,11 +6,15 @@ This is my stuffs.
 
 1. Install neovim (https://github.com/neovim/homebrew-neovim)
 
-2. Install [spf13-vim](https://github.com/spf13/spf13-vim).
+1. Install [spf13-vim](https://github.com/spf13/spf13-vim).
 
-3. Clone this project.
+1. Install [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-4. Run `./install.sh`
+1. [iTerm2 color schema](https://github.com/mbadolato/iTerm2-Color-Schemes), my favorite theme is Seti currently. (I copied it from [here](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors))
+
+1. Clone this project.
+
+1. Run `./install.sh`
 
 `.vimrc.before.local`
 
