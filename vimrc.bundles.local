@@ -1,6 +1,6 @@
-Bundle 'mattn/emmet-vim'
+" Bundle 'mattn/emmet-vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-airline/vim-airline-themes'
+" Bundle 'vim-airline/vim-airline-themes'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'mhinz/vim-startify'
 Bundle 'ervandew/supertab'
@@ -12,6 +12,7 @@ Bundle 'AndrewRadev/switch.vim'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'martinda/Jenkinsfile-vim-syntax'
+Bundle 'nanotech/jellybeans.vim' 
 
 " Unbundle from Default spf13-vim
 UnBundle 'tpope/vim-haml'

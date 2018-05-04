@@ -170,6 +170,7 @@ nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
 " --- `<F7>` tagbar toggle
 nnoremap <silent><F7> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+let g:Tlist_Ctags_Cmd='/usr/local/bin/ctags' 
 
 " --- `<leader>/` - Turn off search highlighting
 " nmap <leader>/ :set hlsearch! hlsearch?<CR>

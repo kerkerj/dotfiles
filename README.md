@@ -6,7 +6,18 @@ This is my stuffs.
 
 1. Install neovim (https://github.com/neovim/homebrew-neovim)
 
+   1. create `~/.config/nvim/init.vim` to read original .vimrc
+
+   1. ```
+      set runtimepath^=~/.vim runtimepath+=~/.vim/after
+      let &packpath = &runtimepath
+      source ~/.vimrc
+      ```
+
 1. Install [spf13-vim](https://github.com/spf13/spf13-vim).
+
+   1. `brew install cmake reattach-to-user-namespace ctags-exuberant`
+   1. Update issue: [HTML-AutoCloseTag](https://github.com/spf13/spf13-vim/pull/1035)
 
 1. Install [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
@@ -24,6 +35,27 @@ This is my stuffs.
 
 I use [ gruvbox ](https://github.com/morhetz/gruvbox) as my vim colorschema
 
+* To test true color:
+
+Run `printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"` or 
+
+```
+# from https://gist.github.com/XVilka/8346728
+awk 'BEGIN{
+    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+    for (colnum = 0; colnum<77; colnum++) {
+        r = 255-(colnum*255/76);
+        g = (colnum*510/76);
+        b = (colnum*255/76);
+        if (g>255) g = 510-g;
+        printf "\033[48;2;%d;%d;%dm", r,g,b;
+        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+        printf "%s\033[0m", substr(s,colnum+1,1);
+    }
+    printf "\n";
+}'
+```
+
 ## Enable powerline font
 
 clone `https://github.com/powerline/fonts`, and run `./install.sh`
@@ -38,9 +70,16 @@ My personal favorites: `Meslo LG S DZ Regular for powerline`, ``
 $ tmux source-file ~/.tmux.conf
 ```
 
-## Gruvbox issue (https://github.com/morhetz/gruvbox/wiki/Terminal-specific)
+## Gruvbox issue
+
+https://github.com/morhetz/gruvbox/wiki/Terminal-specific
 
 Use neovim will fix anything!
+
+## macOS System Preference Config
+
+1. https://github.com/specialunderwear/Hosts.prefpane
+1. https://github.com/jimbojsb/launchrocket
 
 ## Just my notes below
 
