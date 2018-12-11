@@ -1,6 +1,6 @@
 # YooooDoNotDeleteMe
 
-This is my stuffs.
+This is my stuff.
 
 ## Install
 
@@ -27,11 +27,11 @@ This is my stuffs.
 
 1. Run `./install.sh`
 
-`.vimrc.before.local`
-
-`.vimrc.bundles.local`
-
-`.vimrc.local`
+    ```
+    .vimrc.before.local
+    .vimrc.bundles.local
+    .vimrc.local
+    ```
 
 I use [ gruvbox ](https://github.com/morhetz/gruvbox) as my vim colorschema
 
@@ -168,20 +168,28 @@ Plugin 'ervandew/supertab'
 
 * Alfred 2
 * AppCleaner
+* Audacity (mp3 editor)
 * Atom
 * Boom 2 (Not Free)
+* Boostnote
 * BatteryHealth
+* BitBar
 * Burpsuite - An integrated platform for performing security testing of web applications. (https://portswigger.net/burp/)
 * DaisyDisk - 檢查磁碟用量分佈 (Not Free)
 * Dash - 離線查詢文件 (Not Free)
-* Docker - Docker Quick start Terminal.app, Kitematic.app
+* Docker.app
 * Dropbox
+* Droplr
 * Evernote
 * Firefox
+* Flycut (copy history)
 * Google Chrome
+* Goland
+* Grammarly
 * HyperSwitch - Quick Switch while in command+tab mode
-* iTerm
+* iTerm2
 * iTerm2ColorSchema - http://iterm2colorschemes.com/
+* Joplin (another note and todo app, like Boostnote)
 * Karabiner - A powerful and stable keyboard customizer for OS X.
 * Keka - 解壓縮工具
 * LimeChat - IRC gui client
@@ -191,27 +199,33 @@ Plugin 'ervandew/supertab'
 * Memory Clean
 * MPlayerX
 * MySQLWorkbench - MySQL gui client
+* Medis (self-built)
 * Nally - BBS client
+* OmniFocus
 * pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)
 * Postico - A Modern PostgreSQL Client for OS X. Free Version (https://eggerapps.at/postico/)
 * rdm.app - redis gui client
 * Robomongo - mongodb gui client
+* Reeder (RSS)
+* RubyMine
 * Seil
 * Skype
 * Slack
 * SoureTree
+* Sequel Pro
 * Spectacle - window arrangement
 * SSH Tunnel Manager
 * Sublime text
+* Table Plus (database management)
 * TeamViewer
 * Transmission - BT client.
 * Tunnelblck
+* Time out (productivity)
 * Vagrant
 * VirtualBox
 * Wireshark
 * Xcode
 * XtraFinder - Replacement of Mac Finder. (Need to disable SIP)
-
 * zsh + oh-ny-zsh
   * zsh-syntax-highlighting (see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#with-oh-my-zsh)
   * autojump
@@ -239,6 +253,39 @@ Plugin 'ervandew/supertab'
 * go
 * python3
 * neovim
+
+```
+$ brew list
+allure				glib				kubernetes-cli			msgpack				sonar-scanner
+ansible				glide				kubernetes-helm			mysql-client			sqlite
+apache-flink			gmp				libevent			neovim				sysbench
+apr				gnu-sed				libffi				nmap				telnet
+apr-util			go				libgpg-error			node				terraform
+argon2				go@1.10				libidn2				oniguruma			terragrunt
+aspell				grafana				libimobiledevice		openjpeg			the_silver_searcher
+autoconf			graphviz			libksba				openssl				tig
+autojump			gx				libplist			openssl@1.1			tmux
+automake			gx-go				libpng				pcre				tree
+cassandra			htop				libpq				pcre++				ttygif
+cmake				httpie				librdkafka			pcre2				ttyrec
+cocoapods			hub				libsodium			pdsh				unibilium
+consul				hugo				libtasn1			peco				unison
+coreutils			icu4c				libtermkey			percona-server			unixodbc
+ctags				ideviceinstaller		libtiff				phantomjs			usbmuxd
+cython				imagemagick			libtool				php				vault
+diff-so-fancy			imagemagick@6			libunistring			pkg-config			vegeta
+drone				ios-deploy			libusb				prometheus			watch
+envchain			ipfs				libuv				pup				webp
+fontconfig			jaggr				libvterm			python				wget
+freetds				jemalloc			libxml2				python@2			wrk
+freetype			joplin				libyaml				qt				xz
+gd				jpeg				libzip				readline			yajl
+gdb				jplot				little-cms2			reattach-to-user-namespace	yarn
+gdbm				jq				luajit				redis
+gettext				jx				lz4				sbt
+git				kafkacat			lzlib				scala@2.11
+git-flow			kops				make				sentry-cli
+```
 
 ## Some references
 
