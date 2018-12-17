@@ -7,6 +7,7 @@ ln `pwd`/vimrc.local ~/.vimrc.local
 ln `pwd`/tmux.conf ~/.tmux.conf
 ln `pwd`/.gitignore_global ~/.gitignore_global
 ln `pwd`/.gitconfig ~/.gitconfig
+ln `pwd`/Brewfile ~/Brewfile
 
 # install
 vim +BundleInstall! +BundleClean +q
