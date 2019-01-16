@@ -4,6 +4,12 @@ This is my stuff.
 
 ## Install
 
+1. Install homebrew
+
+```
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 1. Install neovim (https://github.com/neovim/homebrew-neovim)
 
    1. create `~/.config/nvim/init.vim` to read original .vimrc
@@ -13,6 +19,10 @@ This is my stuff.
       let &packpath = &runtimepath
       source ~/.vimrc
       ```
+
+   1. Python2/3 issue
+
+      https://neovim.io/doc/user/provider.html#provider-python
 
 1. Install [spf13-vim](https://github.com/spf13/spf13-vim).
 
@@ -256,35 +266,7 @@ Plugin 'ervandew/supertab'
 
 ```
 $ brew list
-allure				glib				kubernetes-cli			msgpack				sonar-scanner
-ansible				glide				kubernetes-helm			mysql-client			sqlite
-apache-flink			gmp				libevent			neovim				sysbench
-apr				gnu-sed				libffi				nmap				telnet
-apr-util			go				libgpg-error			node				terraform
-argon2				go@1.10				libidn2				oniguruma			terragrunt
-aspell				grafana				libimobiledevice		openjpeg			the_silver_searcher
-autoconf			graphviz			libksba				openssl				tig
-autojump			gx				libplist			openssl@1.1			tmux
-automake			gx-go				libpng				pcre				tree
-cassandra			htop				libpq				pcre++				ttygif
-cmake				httpie				librdkafka			pcre2				ttyrec
-cocoapods			hub				libsodium			pdsh				unibilium
-consul				hugo				libtasn1			peco				unison
-coreutils			icu4c				libtermkey			percona-server			unixodbc
-ctags				ideviceinstaller		libtiff				phantomjs			usbmuxd
-cython				imagemagick			libtool				php				vault
-diff-so-fancy			imagemagick@6			libunistring			pkg-config			vegeta
-drone				ios-deploy			libusb				prometheus			watch
-envchain			ipfs				libuv				pup				webp
-fontconfig			jaggr				libvterm			python				wget
-freetds				jemalloc			libxml2				python@2			wrk
-freetype			joplin				libyaml				qt				xz
-gd				jpeg				libzip				readline			yajl
-gdb				jplot				little-cms2			reattach-to-user-namespace	yarn
-gdbm				jq				luajit				redis
-gettext				jx				lz4				sbt
-git				kafkacat			lzlib				scala@2.11
-git-flow			kops				make				sentry-cli
+# please see Brewfile
 ```
 
 ## Some references
