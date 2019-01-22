@@ -24,7 +24,7 @@ set history=50      " keep 50 lines of command line history
 set ruler           " show the cursor position all the time
 set autoread        " auto read when file is changed from outside
 set nu              " display line number
-set ts=4            " tabstop 4
+set ts=2            " tabstop 2
 set wak=no          " disable GUI alt menu
 set noswapfile
 " set list listchars=tab:»·,trail:·
@@ -69,9 +69,7 @@ set tm=500
 
 " --- TAB setting{
 set expandtab        "replace <TAB> with spaces
-set softtabstop=4
-set shiftwidth=4
-au FileType Makefile set noexpandtab
+au FileType Makefile setlocal softtabstop=4 shiftwidth=4 noexpandtab
 "}
 
 " --- Highlight trailing whitespaces
@@ -143,7 +141,7 @@ let g:startify_custom_header = [
 " =========================
 " Ruby/Javascripts Settings
 " =========================
-autocmd FileType ruby,eruby,yaml,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType rb,ruby,eruby,yaml,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.eyaml set filetype=yaml
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 autocmd BufNewFile,BufRead *.coffee set filetype=javascript
@@ -288,5 +286,5 @@ let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
 " It tells Vim to look for a tags file in the directory of the current file, in the current directory and up and up until your $HOME
 " (that's the meaning of the semicolon), stopping on the first hit.
 set tags=./.tags,.tags;$HOME
-set autochdir
+" set autochdir
 
