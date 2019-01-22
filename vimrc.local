@@ -108,7 +108,7 @@ let g:indent_guides_auto_colors = 0
 
 " --- Ack.vim
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
+  let g:ackprg = 'ag --vimgrep --skip-vcs-ignores --path-to-ignore ~/.agignore'
 endif
 
 " --- Startify
@@ -241,7 +241,8 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor\ --skip-vcs-ignores
   " Use ag in CtrlP for listing files.
   " let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
-  let g:ctrlp_user_command = 'ag %s --nocolor -g "" --vimgrep --skip-vcs-ignores --path-to-ignore ~/.ignore'
+  "
+  let g:ctrlp_user_command = 'ag %s --nocolor -g "" --vimgrep --skip-vcs-ignores --path-to-ignore ~/.agignore'
   " Ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 1
 endif
@@ -252,13 +253,11 @@ let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] }
 let g:ctrlp_working_path_mode = 'ra'
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|vendor\'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_switch_buffer = 0
 
 " switch.vim
 let g:switch_mapping = "-"
-
-" turbux
-map <leader>r <Plug>SendFocusedTestToTmux
-let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
 
 " --- vim-turbux from ash
 " let g:no_turbux_mappings = 1
@@ -272,3 +271,22 @@ let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
 " fzf
 " If installed using Homebrew
 set rtp+=/usr/local/opt/fzf
+
+" RSpec.vim mappings
+let g:rspec_runner = "os_x_iterm2"
+map <Leader>ct :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
+" turbux
+map <leader>r <Plug>SendFocusedTestToTmux
+let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
+
+" ctags
+" It tells Vim to look for a tags file in the directory of the current file, in the current directory and up and up until your $HOME
+" (that's the meaning of the semicolon), stopping on the first hit.
+set tags=./.tags,.tags;$HOME
+set autochdir
+

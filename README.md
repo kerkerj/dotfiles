@@ -31,6 +31,12 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 1. Install [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
+   1. install `zsh-autosuggestion`
+
+   ```
+   $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   ```
+
 1. [iTerm2 color schema](https://github.com/mbadolato/iTerm2-Color-Schemes), my favorite theme is Seti currently. (I copied it from [here](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors))
 
 1. Clone this project.
@@ -93,15 +99,17 @@ Use neovim will fix anything!
 
 ## Just my notes below
 
-OSX - must use F1 to F12 as standard function keys
+### OSX - must use F1 to F12 as standard function keys
 
 * `F2`  - Remove all trailing spaces
+* `F3`  - Save current vim session with default session name `vim_sessions` (Use `:SSave` to save sessions manually)
+* `F4`  - Load vim session from default session `vim_sessions` (Use `:SLoad` to load sessions manually)
 * `F5`  - Nerdtree
 * `F6`  - copy selected text to OS clipboard
 * `F7`  - tagbar
 * `F12` - paste mode
 
-Leader is set to `,` use `:let mapleader` to see current leader key
+### Leader is set to `,` use `:let mapleader` to see current leader key
 
 * `ctrl-x ctrl-o` - when in insert mode, show Omni completion
 * `<leader>tt` or `F7` - to toggle tagbar
@@ -114,6 +122,17 @@ Leader is set to `,` use `:let mapleader` to see current leader key
 * `<C-J>`     - to auto insert snips
 * `<leader>ig` - toggle indent guide
 * `<leader><leader>w/b` - easymotion
+
+### How to use cTags
+
+1. check with `which ctags`
+2. run `ctags -R -f .tags --exclude=.git --exclude=log` in the root directory of rails (or other languages) project
+3. set `set tags=./.tags;` in .vimrc
+4. now can use `ctrl + ]` to navigate in source files
+
+## .agignore
+
+1. set global ignore folders for `ag`
 
 ## Plugin list
 
