@@ -2,6 +2,11 @@
 
 This is my stuff.
 
+## TODO
+
+- [  ] zsh config
+- [  ] tmuxinator sample config
+
 ## Install
 
 1. Install homebrew
