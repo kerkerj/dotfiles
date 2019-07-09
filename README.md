@@ -204,6 +204,7 @@ Plugin 'ervandew/supertab'
 * AppCleaner
 * Audacity (mp3 editor)
 * ~~Atom~~
+* Authy
 * Boom 2 (Not Free)
 * Boostnote
 * BatteryHealth
