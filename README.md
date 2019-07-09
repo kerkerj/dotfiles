@@ -200,10 +200,10 @@ Plugin 'ervandew/supertab'
 
 ### Mac apps
 
-* Alfred 2
+* Alfred 4
 * AppCleaner
 * Audacity (mp3 editor)
-* Atom
+* ~~Atom~~
 * Boom 2 (Not Free)
 * Boostnote
 * BatteryHealth
@@ -214,52 +214,68 @@ Plugin 'ervandew/supertab'
 * Docker.app
 * Dropbox
 * Droplr
-* Evernote
+* Dozer - clean menu
+* ~~Evernote~~
 * Firefox
-* Flycut (copy history)
+* FileZilla
+* ~~Flycut (copy history)~~ You can use `Alfred 4` instead.
 * Google Chrome
 * Goland
 * Grammarly
-* HyperSwitch - Quick Switch while in command+tab mode
+* HyperSwitch - Quick Switch while in command+tab mode (https://bahoom.com/hyperswitch)
+    * https://www.reddit.com/r/mac/comments/9l91l4/hyperswitch_not_working_with_mojave_ideas_for/
 * iTerm2
 * iTerm2ColorSchema - http://iterm2colorschemes.com/
-* Joplin (another note and todo app, like Boostnote)
+* Insomnia
+* ~~Joplin (another note and todo app, like Boostnote)~~
 * Karabiner - A powerful and stable keyboard customizer for OS X.
 * Keka - 解壓縮工具
 * LimeChat - IRC gui client
 * Little Snitch 3 - Check network connections (Not Free)
 * LiveReload
-* MacDown - markdown editor
+* LastPass
+* LINE
+* ~~MacDown - markdown editor~~
 * Memory Clean
 * MPlayerX
 * MySQLWorkbench - MySQL gui client
 * Medis (self-built)
+* MoneyPro
 * Nally - BBS client
 * OmniFocus
-* pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)
+* ~~pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)~~
 * Postico - A Modern PostgreSQL Client for OS X. Free Version (https://eggerapps.at/postico/)
+* Postman
 * rdm.app - redis gui client
 * Robomongo - mongodb gui client
-* Reeder (RSS)
+* ~~Reeder (RSS)~~
 * RubyMine
+* Runcat
 * Seil
 * Skype
 * Slack
 * SoureTree
 * Sequel Pro
-* Spectacle - window arrangement
+* Spectacle - window arrangement https://www.spectacleapp.com/
 * SSH Tunnel Manager
-* Sublime text
-* Table Plus (database management)
+* Spotify
+* ~~Sublime text~~
+* ~~Table Plus (database management)~~
 * TeamViewer
 * Transmission - BT client.
 * Tunnelblck
+* Typora
+* Trailer - github notification
 * Time out (productivity)
 * Vagrant
 * VirtualBox
+* VSCode
+* VLC
 * Wireshark
+* WifiExplorerLite
 * Xcode
-* XtraFinder - Replacement of Mac Finder. (Need to disable SIP)
+* ~~XtraFinder - Replacement of Mac Finder. (Need to disable SIP)~~
+* zoom.us
 * zsh + oh-ny-zsh
   * zsh-syntax-highlighting (see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#with-oh-my-zsh)
   * autojump
@@ -304,4 +320,13 @@ https://ruby-china.org/topics/25295
 * [powerline-fonts](https://github.com/powerline/fonts)
 * [fantasque-sans](https://github.com/belluzj/fantasque-sans)
 
+
+
+## Screen Saver
+
+* https://github.com/chrstphrknwtn/grid-clock-screensaver
+
+
+
+## Alfred 4 workflows
 

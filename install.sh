@@ -10,6 +10,7 @@ ln -s `pwd`/.gitconfig ~/.gitconfig
 ln -s `pwd`/Brewfile ~/Brewfile
 ln -s `pwd`/.gemrc ~/.gemrc
 ln -s `pwd`/.agignore ~/.agignore
+ln -s `pwd`/hubconfig ~/.config/hub
 
 # install
 vim +BundleInstall! +BundleClean +q
