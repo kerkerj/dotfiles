@@ -331,3 +331,4 @@ https://ruby-china.org/topics/25295
 
 ## Alfred 4 workflows
 
+See [AlfredWorkFlows.md](https://github.com/kerkerj/dotfiles/blob/master/AlfredWorkFlows.md)
