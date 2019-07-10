@@ -308,6 +308,9 @@ Plugin 'ervandew/supertab'
 ```
 $ brew list
 # please see Brewfile
+
+# basic
+$ brew install autojump diff-so-fancy direnv fzf envchain httpie hub jq git git-extras git-flow neovim peco reattach-to-user-namespace the_silver_searcher tig tmux tree wget watch
 ```
 
 ## Some references
