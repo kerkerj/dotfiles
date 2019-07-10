@@ -200,8 +200,8 @@ Plugin 'ervandew/supertab'
 
 ### Mac apps
 
-* Alfred 4
-* AppCleaner
+* [Alfred 4](https://www.alfredapp.com/)
+* [AppCleaner](https://freemacsoft.net/appcleaner/)
 * Audacity (mp3 editor)
 * ~~Atom~~
 * Authy
@@ -213,8 +213,8 @@ Plugin 'ervandew/supertab'
 * DaisyDisk - 檢查磁碟用量分佈 (Not Free)
 * Dash - 離線查詢文件 (Not Free)
 * Docker.app
-* Dropbox
-* Droplr
+* [Dropbox](https://www.dropbox.com/install)
+* [Droplr](https://droplr.com/apps/)
 * Dozer - clean menu
 * ~~Evernote~~
 * Firefox
@@ -257,7 +257,7 @@ Plugin 'ervandew/supertab'
 * Slack
 * SoureTree
 * Sequel Pro
-* Spectacle - window arrangement https://www.spectacleapp.com/
+* [Spectacle](https://www.spectacleapp.com/) - window arrangement
 * SSH Tunnel Manager
 * Spotify
 * ~~Sublime text~~
