@@ -218,7 +218,7 @@ Plugin 'ervandew/supertab'
 * Burpsuite - An integrated platform for performing security testing of web applications. (https://portswigger.net/burp/)
 * DaisyDisk - 檢查磁碟用量分佈 (Not Free)
 * Dash - 離線查詢文件 (Not Free)
-* Docker.app
+* [Docker.app](https://docs.docker.com/docker-for-mac/install/)
 * [Dropbox](https://www.dropbox.com/install)
 * [Droplr](https://droplr.com/apps/)
 * Dozer - clean menu
@@ -314,6 +314,9 @@ Plugin 'ervandew/supertab'
 ```
 $ brew list
 # please see Brewfile
+
+# basic
+$ brew install autojump diff-so-fancy direnv fzf envchain httpie hub jq git git-extras git-flow neovim peco reattach-to-user-namespace the_silver_searcher tig tmux tree wget watch
 ```
 
 ## Some references
