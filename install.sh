@@ -14,3 +14,6 @@ ln -s `pwd`/hubconfig ~/.config/hub
 
 # install
 vim +BundleInstall! +BundleClean +q
+
+# show hidden files
+./scripts/show_hidden_files.sh

@@ -97,6 +97,12 @@ https://github.com/morhetz/gruvbox/wiki/Terminal-specific
 
 Use neovim will fix anything!
 
+## GitHub Dark Script
+
+https://github.com/StylishThemes/GitHub-Dark-Script
+
+Choose `Install From GitHub`
+
 ## macOS System Preference Config
 
 1. https://github.com/specialunderwear/Hosts.prefpane
