@@ -28,6 +28,14 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
    1. Python2/3 issue
 
       https://neovim.io/doc/user/provider.html#provider-python
+      
+      ```
+      $ python3 -m pip install --user --upgrade pynvim
+      and modify YCM install.sh, change python to python3 in first line
+      and execute install.sh
+      ```
+      
+      
 
 1. Install [spf13-vim](https://github.com/spf13/spf13-vim).
 
@@ -79,11 +87,11 @@ awk 'BEGIN{
 
 ## Enable powerline font
 
-clone `https://github.com/powerline/fonts`, and run `./install.sh`
+clone [https://github.com/powerline/fonts](https://github.com/powerline/fonts)`, and run `./install.sh
 
 Then choose fonts in iTerm2.
 
-My personal favorites: `Meslo LG S DZ Regular for powerline`, ``
+My personal favorites: `Meslo LG S DZ Regular for powerline`
 
 ## Reload tmux configuration
 
@@ -107,6 +115,7 @@ Choose `Install From GitHub`
 
 1. https://github.com/specialunderwear/Hosts.prefpane
 1. https://github.com/jimbojsb/launchrocket
+1. [Wi-Fi disconnects when I lock the mac](https://apple.stackexchange.com/questions/71884/wi-fi-disconnects-when-i-lock-the-mac)
 
 ## Just my notes below
 
