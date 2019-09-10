@@ -287,4 +287,3 @@ let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
 " (that's the meaning of the semicolon), stopping on the first hit.
 set tags=./.tags,.tags;$HOME
 " set autochdir
-

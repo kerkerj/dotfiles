@@ -14,7 +14,9 @@ Bundle 'martinda/Jenkinsfile-vim-syntax'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'posva/vim-vue'
 Bundle 'ternjs/tern_for_vim'
-Bundle 'hashivim/vim-terraform'
+
+Bundle 'hashivim/vim-hashicorp-tools'
+Bundle 'fatih/vim-hclfmt'
 
 " rails
 Bundle 'thoughtbot/vim-rspec'
