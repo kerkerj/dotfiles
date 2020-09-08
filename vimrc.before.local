@@ -1,5 +1,5 @@
 " Original groups
 "let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
-let g:spf13_bundle_groups=['general',  'programming', 'ruby', 'javascript', 'go', 'html', 'youcompleteme',]
+let g:spf13_bundle_groups=['general',  'programming', 'ruby', 'javascript', 'go', 'html']
 let g:airline_powerline_fonts=1
 

@@ -23,6 +23,9 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'tpope/vim-endwise'
 
+" language server
+Bundle 'autozimu/LanguageClient-neovim'
+
 " Unbundle from Default spf13-vim
 UnBundle 'tpope/vim-haml'
 UnBundle 'tpope/vim-abolish.git'
