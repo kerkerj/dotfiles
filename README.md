@@ -9,85 +9,58 @@ This is my stuff.
 
 ## Install
 
-1. Install homebrew
+1. Clone this project.
 
-```
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+2. Run `./install.sh`, will install homebrew and apps, link configs, install and configure `neovim`, `spf13-vim`, `oh-my-zsh`.
 
-1. Install neovim (https://github.com/neovim/homebrew-neovim)
+   ```
+   .vimrc.before.local
+   .vimrc.bundles.local
+   .vimrc.local
+   ```
 
-   1. create `~/.config/nvim/init.vim` to read original .vimrc
-
-   1. ```
-      set runtimepath^=~/.vim runtimepath+=~/.vim/after
-      let &packpath = &runtimepath
-      source ~/.vimrc
-      ```
+3. Configure neovim (https://github.com/neovim/neovim)
 
    1. Python2/3 issue
 
       https://neovim.io/doc/user/provider.html#provider-python
-      
+
       ```
       $ python3 -m pip install --user --upgrade pynvim
       and modify YCM install.sh, change python to python3 in first line
       and execute install.sh
       ```
-      
-      
 
-1. Install [spf13-vim](https://github.com/spf13/spf13-vim).
+4. , my favorite theme is Seti currently. (I copied it from [here](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors))
 
-   1. `brew install cmake reattach-to-user-namespace ctags-exuberant`
-   1. Update issue: [HTML-AutoCloseTag](https://github.com/spf13/spf13-vim/pull/1035)
+   1. I use [ gruvbox ](https://github.com/morhetz/gruvbox) as my vim colorschema
 
-1. Install [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+   2. To test true color:
 
-   1. install `zsh-autosuggestion`
+      Run `printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"` or 
 
-   ```
-   $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-   ```
+      ```
+      # from https://gist.github.com/XVilka/8346728
+      awk 'BEGIN{
+          s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+          for (colnum = 0; colnum<77; colnum++) {
+              r = 255-(colnum*255/76);
+              g = (colnum*510/76);
+              b = (colnum*255/76);
+              if (g>255) g = 510-g;
+              printf "\033[48;2;%d;%d;%dm", r,g,b;
+              printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+              printf "%s\033[0m", substr(s,colnum+1,1);
+          }
+          printf "\n";
+      }'
+      ```
 
-1. [iTerm2 color schema](https://github.com/mbadolato/iTerm2-Color-Schemes), my favorite theme is Seti currently. (I copied it from [here](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors))
-
-1. Clone this project.
-
-1. Run `./install.sh`
-
-    ```
-    .vimrc.before.local
-    .vimrc.bundles.local
-    .vimrc.local
-    ```
-
-I use [ gruvbox ](https://github.com/morhetz/gruvbox) as my vim colorschema
-
-* To test true color:
-
-Run `printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"` or 
-
-```
-# from https://gist.github.com/XVilka/8346728
-awk 'BEGIN{
-    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
-    for (colnum = 0; colnum<77; colnum++) {
-        r = 255-(colnum*255/76);
-        g = (colnum*510/76);
-        b = (colnum*255/76);
-        if (g>255) g = 510-g;
-        printf "\033[48;2;%d;%d;%dm", r,g,b;
-        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
-        printf "%s\033[0m", substr(s,colnum+1,1);
-    }
-    printf "\n";
-}'
-```
+5. Install powerline 10k https://github.com/romkatv/powerlevel10k 
 
 ## Enable powerline font
 
-clone [https://github.com/powerline/fonts](https://github.com/powerline/fonts)`, and run `./install.sh
+clone [https://github.com/powerline/fonts](https://github.com/powerline/fonts)`, and run `./install.sh`
 
 Then choose fonts in iTerm2.
 
@@ -116,6 +89,10 @@ Choose `Install From GitHub`
 1. https://github.com/specialunderwear/Hosts.prefpane
 1. https://github.com/jimbojsb/launchrocket
 1. [Wi-Fi disconnects when I lock the mac](https://apple.stackexchange.com/questions/71884/wi-fi-disconnects-when-i-lock-the-mac)
+
+## Increase Cursor Speed
+
+1. [https://www.maketecheasier.com/adjust-cursor-speed-in-mac/](https://www.maketecheasier.com/adjust-cursor-speed-in-mac/)
 
 ## Just my notes below
 
