@@ -3,14 +3,13 @@
   editor = "/usr/local/bin/nvim"
   pager = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [user]
-	name = kerkerj
-	email = jerry54010@gmail.com
+  name = kerkerj
 [alias]
   co = checkout
   ci = commit -m
@@ -38,3 +37,5 @@
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
+[url "git@github.com:"]
+  insteadOf = https://github.com/
