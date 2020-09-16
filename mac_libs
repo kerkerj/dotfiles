@@ -21,3 +21,5 @@ tmux
 tree
 wget
 watch
+pyenv
+nvm
