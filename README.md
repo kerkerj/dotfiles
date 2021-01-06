@@ -229,11 +229,13 @@ Plugin 'ervandew/supertab'
 * ~~Joplin (another note and todo app, like Boostnote)~~
 * Karabiner - A powerful and stable keyboard customizer for OS X.
 * Keka - 解壓縮工具
+* [Keycastr](https://github.com/keycastr/keycastr) - an open-source keystroke visualizer.
 * LimeChat - IRC gui client
 * Little Snitch 3 - Check network connections (Not Free)
 * LiveReload
 * LastPass
 * LINE
+* [Lulu](https://github.com/objective-see/LuLu) is the free macOS firewall 
 * ~~MacDown - markdown editor~~
 * Memory Clean
 * MPlayerX
@@ -241,6 +243,7 @@ Plugin 'ervandew/supertab'
 * Medis (self-built)
 * MoneyPro
 * ~~Nally - BBS client~~ I use term.ptt.cc in browser now
+* [Notion](https://www.notion.so/)
 * OmniFocus
 * ~~pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)~~
 * Postico - A Modern PostgreSQL Client for OS X. Free Version (https://eggerapps.at/postico/)
@@ -250,10 +253,10 @@ Plugin 'ervandew/supertab'
 * Robomongo - mongodb gui client
 * Reeder (RSS)
 * RubyMine
-* Runcat
+* [Runcat](https://apps.apple.com/us/app/runcat/id1429033973?mt=12)
 * Seil
 * Skype
-* Slack
+* [Slack](https://slack.com/intl/en-tw/)
 * SoureTree
 * Sequel Pro
 * [Spectacle](https://www.spectacleapp.com/) - window arrangement
@@ -265,7 +268,7 @@ Plugin 'ervandew/supertab'
 * Transmission - BT client.
 * Tunnelblck
 * Typora
-* Trailer - github notification
+* [Trailer](http://ptsochantaris.github.io/trailer/) - mac app for github notification
 * Time out (productivity)
 * Vagrant
 * VirtualBox
