@@ -23,3 +23,7 @@ wget
 watch
 pyenv
 nvm
+kafkacat
+mysql
+mysql-client
+bat

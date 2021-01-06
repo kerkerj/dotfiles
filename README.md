@@ -196,30 +196,36 @@ Plugin 'ervandew/supertab'
 * [AppCleaner](https://freemacsoft.net/appcleaner/)
 * Audacity (mp3 editor)
 * ~~Atom~~
+* [Annotate](https://apps.apple.com/us/app/annotate-capture-and-share/id918207447?mt=12) - Capture and Share 
 * Authy
 * Boom 2 (Not Free)
-* Boostnote
+* ~~Boostnote~~
 * BatteryHealth
 * BitBar
 * Burpsuite - An integrated platform for performing security testing of web applications. (https://portswigger.net/burp/)
 * DaisyDisk - 檢查磁碟用量分佈 (Not Free)
 * Dash - 離線查詢文件 (Not Free)
+* DataGrip
+* [Dozer](https://github.com/Mortennn/Dozer) 一拖一點還你乾淨的選單欄
 * [Docker.app](https://docs.docker.com/docker-for-mac/install/)
 * [Dropbox](https://www.dropbox.com/install)
 * [Droplr](https://droplr.com/apps/)
 * Dozer - clean menu
 * ~~Evernote~~
+* [eul](https://github.com/gao-sun/eul) - mac system stat monitor
 * Firefox
 * FileZilla
 * ~~Flycut (copy history)~~ You can use `Alfred 4` instead.
 * Google Chrome
 * Goland
 * Grammarly
+* [Gas Mask](https://github.com/2ndalpha/gasmask) - GUI tool to manage hosts file. I used [SwitchHosts](https://github.com/oldj/SwitchHosts) before, but it is wrapped by Electron, which is so heavy.
 * HyperSwitch - Quick Switch while in command+tab mode (https://bahoom.com/hyperswitch)
     * https://www.reddit.com/r/mac/comments/9l91l4/hyperswitch_not_working_with_mojave_ideas_for/
 * iTerm2
 * iTerm2ColorSchema - http://iterm2colorschemes.com/
-* Insomnia
+* [Insomnia](https://github.com/Kong/insomnia) - The API Design Platform and REST Client (I use Paw now)
+* [itsycal](https://github.com/sfsam/Itsycal) - a tiny calendar for your Mac's menu bar.
 * ~~Joplin (another note and todo app, like Boostnote)~~
 * Karabiner - A powerful and stable keyboard customizer for OS X.
 * Keka - 解壓縮工具
@@ -234,14 +240,15 @@ Plugin 'ervandew/supertab'
 * MySQLWorkbench - MySQL gui client
 * Medis (self-built)
 * MoneyPro
-* Nally - BBS client
+* ~~Nally - BBS client~~ I use term.ptt.cc in browser now
 * OmniFocus
 * ~~pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)~~
 * Postico - A Modern PostgreSQL Client for OS X. Free Version (https://eggerapps.at/postico/)
-* Postman
+* Postman (I use Paw now)
+* [Paw](https://paw.cloud/)
 * rdm.app - redis gui client
 * Robomongo - mongodb gui client
-* ~~Reeder (RSS)~~
+* Reeder (RSS)
 * RubyMine
 * Runcat
 * Seil
