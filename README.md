@@ -250,6 +250,7 @@ Plugin 'ervandew/supertab'
 * Postman (I use Paw now)
 * [Paw](https://paw.cloud/)
 * rdm.app - redis gui client
+* [Rectangle](https://rectangleapp.com/) - window management (I change to use Rectangle instead of Spectacle)
 * Robomongo - mongodb gui client
 * Reeder (RSS)
 * RubyMine
