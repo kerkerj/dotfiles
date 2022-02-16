@@ -312,3 +312,10 @@ set tags=./.tags,.tags;$HOME
 " nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 " nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 " nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+" set hcl file
+autocmd BufRead,BufNewFile *.hcl set filetype=terraform
+
+
+" eliminating delays on ESC in vim
+set timeoutlen=1000 ttimeoutlen=0
