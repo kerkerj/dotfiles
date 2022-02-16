@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# install oh-my-zsh
+echo "Installing oh-my-zsh... https://github.com/robbyrussell/oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # make links
 ln -s `pwd`/vimrc.before.local ~/.vimrc.before.local
 ln -s `pwd`/vimrc.bundles.local ~/.vimrc.bundles.local
@@ -16,11 +20,6 @@ ln -s `pwd`/.ideavimrc ~/.ideavimrc
 # show hidden files
 ./scripts/show_hidden_files.sh
 
-# brew install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-./install_mac_libs.sh
-./install_mac_apps.sh
-
 # Setup neovim
 mkdir -p ~/.config/nvim/
 cat <<EOT >> ~/.config/nvim/init.vim
@@ -36,10 +35,6 @@ curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 # fix spf13-vim HTML-Autotag error
 echo "fixing spf13-vim HTML-autotag error... https://github.com/spf13/spf13-vim/pull/1035"
 sed -i '' 's/amirh/vim-scripts/' ~/.vimrc.bundles
-
-# install oh-my-zsh
-echo "Installing oh-my-zsh... https://github.com/robbyrussell/oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install zsh auto suggestion
 echo "Installing zsh-autosuggestion..."
