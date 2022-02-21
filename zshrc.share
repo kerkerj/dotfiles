@@ -74,7 +74,7 @@ export GPG_TTY=$(tty)
 KEYTIMEOUT=1
 
 # custom functions are in here
-source zsh.custom.functions
+source ~/.zshrc.custom.functions
 
 # for local usage, won't be synced
-source zshrc.local
+source ~/.zshrc.local

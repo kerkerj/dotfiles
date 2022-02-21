@@ -15,6 +15,8 @@ ln -s `pwd`/.agignore ~/.agignore
 ln -s `pwd`/hubconfig ~/.config/hub
 ln -s `pwd`/.ideavimrc ~/.ideavimrc
 ln -s `pwd`/zshrc.share ~/.zshrc.share
+ln -s `pwd`/zshrc.custom.functions ~/.zshrc.custom.functions
+ln -s `pwd`/zshrc.local.alleypin ~/.zshrc.local
 
 # show hidden files
 ./scripts/show_hidden_files.sh
