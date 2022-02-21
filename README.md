@@ -4,14 +4,16 @@ This is my stuff.
 
 ## TODO
 
-- [  ] zsh config
-- [  ] tmuxinator sample config
+- [ ] tmuxinator sample config
+- [ ] https://github.com/ahmetb/kubectx
+- [ ] https://github.com/superbrothers/zsh-kubectl-prompt
 
 ## Install
 
 1. Clone this project.
-
-2. Run `./install.sh`, will install homebrew and apps, link configs, install and configure `neovim`, `spf13-vim`, `oh-my-zsh`.
+2. Install `oh-my-zsh` first
+3. Run `./install_homebrew_mac_libs_apps.sh` to select libs and apps (remember to install neovim to proceed the next step)
+4. Run `./install_vim_misc.sh`, will link configs, install and configure `neovim`, `spf13-vim`, `oh-my-zsh`.
 
    ```
    .vimrc.before.local
@@ -19,7 +21,7 @@ This is my stuff.
    .vimrc.local
    ```
 
-3. Configure neovim (https://github.com/neovim/neovim)
+5. Configure neovim (https://github.com/neovim/neovim)
 
    1. Python2/3 issue
 
@@ -31,7 +33,7 @@ This is my stuff.
       and execute install.sh
       ```
 
-4. , my favorite theme is Seti currently. (I copied it from [here](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors))
+6. , my favorite theme is Seti currently. (I copied it from [here](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors))
 
    1. I use [ gruvbox ](https://github.com/morhetz/gruvbox) as my vim colorschema
 
@@ -56,7 +58,8 @@ This is my stuff.
       }'
       ```
 
-5. Install powerline 10k https://github.com/romkatv/powerlevel10k 
+7. Install powerline 10k https://github.com/romkatv/powerlevel10k 
+8. Edit `~/.config/hub` with GitHub personal token.
 
 ## Enable powerline font
 
@@ -133,73 +136,20 @@ Choose `Install From GitHub`
 
 ## Plugin list
 
-```
-Plugin 'gmarik/vundle'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'spf13/vim-colors'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'spf13/vim-autoclose'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'kristijanhusak/vim-multiple-cursors'
-Plugin 'vim-scripts/sessionman.vim'
-Plugin 'matchit.zip'
-Plugin 'bling/vim-airline'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'mbbill/undotree'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vim-scripts/restore_view.vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'osyo-manga/vim-over'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-indent'
-Plugin 'gcmt/wildfire.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-commentary'
-Plugin 'godlygeek/tabular'
-Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'elzr/vim-json'
-Plugin 'pangloss/vim-javascript'
-Plugin 'briancollins/vim-jst'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'amirh/HTML-AutoCloseTag'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'tpope/vim-rails'
-Plugin 'fatih/vim-go'
-Plugin 'mattn/emmet-vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'ervandew/supertab'
-```
+See `vimrc.bundles` (after installing `spf13-vim`) and `vimrc.bundles.local`
 
 ## Some notes
 
 ### Mac apps
 
+Also see `mac_apps`
+
 * [Alfred 4](https://www.alfredapp.com/)
 * [AppCleaner](https://freemacsoft.net/appcleaner/)
 * Audacity (mp3 editor)
-* ~~Atom~~
 * [Annotate](https://apps.apple.com/us/app/annotate-capture-and-share/id918207447?mt=12) - Capture and Share 
 * Authy
 * Boom 2 (Not Free)
-* ~~Boostnote~~
 * BatteryHealth
 * BitBar
 * Burpsuite - An integrated platform for performing security testing of web applications. (https://portswigger.net/burp/)
@@ -211,7 +161,6 @@ Plugin 'ervandew/supertab'
 * [Dropbox](https://www.dropbox.com/install)
 * [Droplr](https://droplr.com/apps/)
 * Dozer - clean menu
-* ~~Evernote~~
 * [eul](https://github.com/gao-sun/eul) - mac system stat monitor
 * Firefox
 * FileZilla
@@ -226,48 +175,27 @@ Plugin 'ervandew/supertab'
 * iTerm2ColorSchema - http://iterm2colorschemes.com/
 * [Insomnia](https://github.com/Kong/insomnia) - The API Design Platform and REST Client (I use Paw now)
 * [itsycal](https://github.com/sfsam/Itsycal) - a tiny calendar for your Mac's menu bar.
-* ~~Joplin (another note and todo app, like Boostnote)~~
 * Karabiner - A powerful and stable keyboard customizer for OS X.
 * Keka - 解壓縮工具
 * [Keycastr](https://github.com/keycastr/keycastr) - an open-source keystroke visualizer.
 * LimeChat - IRC gui client
 * Little Snitch 3 - Check network connections (Not Free)
-* LiveReload
-* LastPass
-* LINE
 * [Lulu](https://github.com/objective-see/LuLu) is the free macOS firewall 
-* ~~MacDown - markdown editor~~
-* Memory Clean
-* MPlayerX
-* MySQLWorkbench - MySQL gui client
-* Medis (self-built)
-* MoneyPro
-* ~~Nally - BBS client~~ I use term.ptt.cc in browser now
-* [Notion](https://www.notion.so/)
 * OmniFocus
-* ~~pgAdmin3 - A open source postgresql gui client (http://www.pgadmin.org/)~~
 * Postico - A Modern PostgreSQL Client for OS X. Free Version (https://eggerapps.at/postico/)
 * Postman (I use Paw now)
 * [Paw](https://paw.cloud/)
-* rdm.app - redis gui client
 * [Rectangle](https://rectangleapp.com/) - window management (I change to use Rectangle instead of Spectacle)
-* Robomongo - mongodb gui client
 * Reeder (RSS)
-* RubyMine
 * [Runcat](https://apps.apple.com/us/app/runcat/id1429033973?mt=12)
 * Seil
-* Skype
 * [Slack](https://slack.com/intl/en-tw/)
-* SoureTree
+* SourceTree
 * Sequel Pro
-* [Spectacle](https://www.spectacleapp.com/) - window arrangement
 * SSH Tunnel Manager
 * Spotify
-* ~~Sublime text~~
-* ~~Table Plus (database management)~~
 * TeamViewer
 * Transmission - BT client.
-* Tunnelblck
 * Typora
 * [Trailer](http://ptsochantaris.github.io/trailer/) - mac app for github notification
 * Time out (productivity)
@@ -278,43 +206,13 @@ Plugin 'ervandew/supertab'
 * Wireshark
 * WifiExplorerLite
 * Xcode
-* ~~XtraFinder - Replacement of Mac Finder. (Need to disable SIP)~~
 * zoom.us
-* zsh + oh-ny-zsh
-  * zsh-syntax-highlighting (see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#with-oh-my-zsh)
-  * autojump
-  * ssh-agent
-  * theme: avit
+* zsh + oh-my-zsh
+* Dadroit JSON Viewer.app - for big json data
 
 ### hombrew (http://brew.sh/)
 
-* autojump - A cd command that learns - easily navigate directories from the command line http://wiki.github.com/joelthelion/autojump/
-* the_silver_searcher - ag quicker seacher
-* tig - Text-mode interface for git http://jonas.nitro.dk/tig/
-* tmate - Instant terminal sharing.
-* tree - a recursive directory listing command.
-* htop
-* vim
-* siege - a http load testing and benchmarking utility.
-* httpie - CLI HTTP client; user-friendly cURL replacement featuring intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc. http://httpie.org
-* jq - json query
-* ctags
-* watchman - watches files and takes action when they change.
-* wget
-* hugo
-* vegeta
-* swiftenv - Swift Version Manager
-* go
-* python3
-* neovim
-
-```
-$ brew list
-# please see Brewfile
-
-# basic
-$ brew install autojump diff-so-fancy direnv fzf envchain httpie hub jq git git-extras git-flow neovim peco reattach-to-user-namespace the_silver_searcher tig tmux tree wget watch
-```
+See `mac_libs` and `mac_apps`
 
 ## Some references
 
@@ -327,13 +225,10 @@ https://ruby-china.org/topics/25295
 * [powerline-fonts](https://github.com/powerline/fonts)
 * [fantasque-sans](https://github.com/belluzj/fantasque-sans)
 
-
-
 ## Screen Saver
 
 * https://github.com/chrstphrknwtn/grid-clock-screensaver
-
-
+* or `aerial` via homebrew
 
 ## Alfred 4 workflows
 

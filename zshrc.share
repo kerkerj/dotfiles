@@ -1,0 +1,80 @@
+# custom content for zsh
+
+# overwrite ZSH_THEME - remember to install powerlevel10k
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
+# p10k - To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh  ]] || source ~/.p10k.zsh
+
+# powelevel10k
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# plugins
+plugins=(git ruby golang autojump terraform zsh-autosuggestions)
+
+# alias
+alias docker=podman
+alias ls=exa
+alias vim=nvim
+alias k=kubectl
+alias kgetall='kubectl get namespace,replicaset,secret,nodes,job,daemonset,statefulset,ingress,configmap,pv,pvc,service,deployment,pod --all-namespaces'
+alias kc="kubecolor"
+alias rm="trash"
+alias pip="pip3"
+
+# autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# python
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
+# java from brew
+export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
+
+# HSTR configuration - add this to ~/.zshrc
+alias hh=hstr                    # hh to be alias for hstr
+setopt histignorespace           # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor       # get more colors
+bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
+
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
+# kubectl
+complete -F __start_kubectl k
+source <(kubectl completion zsh)
+
+# NVM - node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Changes the ulimit limits.
+ulimit -Sn 4096      # Increase open files.
+ulimit -Sl unlimited # Increase max locked memory.
+
+# fzf - use `$HOMEBREW_PREFIX/opt/fzf/install` to install
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# gnused
+PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# gnupg
+export GPG_TTY=$(tty)
+
+# eliminating delays on ESC in zsh
+# 10ms for key sequences
+# ref: https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+KEYTIMEOUT=1
+
+# custom functions are in here
+source zsh.custom.functions
+
+# for local usage, won't be synced
+source zshrc.local

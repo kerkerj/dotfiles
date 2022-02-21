@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # install oh-my-zsh
-echo "Installing oh-my-zsh... https://github.com/robbyrussell/oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Remember to install oh-my-zsh... https://github.com/robbyrussell/oh-my-zsh"
 
 # make links
 ln -s `pwd`/vimrc.before.local ~/.vimrc.before.local
@@ -11,11 +10,11 @@ ln -s `pwd`/vimrc.local ~/.vimrc.local
 ln -s `pwd`/tmux.conf ~/.tmux.conf
 ln -s `pwd`/.gitignore_global ~/.gitignore_global
 ln -s `pwd`/.gitconfig ~/.gitconfig
-# ln -s `pwd`/Brewfile ~/Brewfile
 ln -s `pwd`/.gemrc ~/.gemrc
 ln -s `pwd`/.agignore ~/.agignore
 ln -s `pwd`/hubconfig ~/.config/hub
 ln -s `pwd`/.ideavimrc ~/.ideavimrc
+ln -s `pwd`/zshrc.share ~/.zshrc.share
 
 # show hidden files
 ./scripts/show_hidden_files.sh

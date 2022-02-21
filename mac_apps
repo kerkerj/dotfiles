@@ -1,21 +1,35 @@
+------ Common
 aerial
 appcleaner
-droplr
 alfred
-dozer
-typora
 rectangle
-obsidian
-discord
 itsycal
 bartender
-synology-drive
+dozer
 monitorcontrol
 alt-tab
+pomatez
+------ Communication
 spotify
-notion
+slack
+discord
 telegram
----
+------ Storage
+dropbox
+synology-drive
+------ Note
+obsidian
+notion
+remnote
+------ Database
+postico
+reqlpro
+------ Fonts
+font-fantasque-sans-mono
+------ Markdown Editors
+mark-text
+typora
+------ Work
 iterm2
 sourcetree
 postman
@@ -23,19 +37,23 @@ datagrip
 goland
 trailer
 google-cloud-sdk
-remnote
----
-postico
-reqlpro
----
-font-fantasque-sans-mono
----
+------ Security
+lulu
+burp-suite
+------ Others
 keycastr
----
+edex-ui
 docker
 hyperswitch
 launchrocket
-dropbox
 dash
 insomnia
 kekadefaultapp
+conduktor
+droplr
+eul
+karabiner-elements
+keybase
+ngrok
+switchhosts
+vagrant

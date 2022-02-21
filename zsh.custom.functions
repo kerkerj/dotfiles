@@ -1,0 +1,39 @@
+# my custom functions
+
+# docker functions
+function dstopall() {
+    docker stop -t 0 $(docker ps -a -q)
+}
+
+function drmall() {
+    docker rm -vf $(docker ps -a -q)
+}
+
+function drminone() {
+    docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+}
+
+function drmiall() {
+    docker rmi -f $(docker images -a -q)
+}
+
+# restart services in docker-compose
+function docker-compose-restart() {
+    docker-compose stop $@
+    docker-compose rm -f -v $@
+    docker-compose create --force-recreate $@
+    docker-compose start $@
+}
+
+# timestamp functions
+function timestamp() {
+    date +%s
+}
+
+# k8s quick get all resources
+function kubectlgetall {
+    for i in $(kubectl api-resources --verbs=list --namespaced -o name | grep -v "events.events.k8s.io" | grep -v "events" | sort | uniq); do
+        echo "Resource:" $i
+        kubectl -n ${1} get --ignore-not-found ${i}
+    done
+}
