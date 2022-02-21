@@ -137,3 +137,6 @@ pyroscope-io/brew/pyroscope
 ycd/tap/dstp
 watchman
 hugo
+mkcert
+pdsh
+pre-commit

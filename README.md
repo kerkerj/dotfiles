@@ -209,6 +209,8 @@ Also see `mac_apps`
 * zoom.us
 * zsh + oh-my-zsh
 * Dadroit JSON Viewer.app - for big json data
+* Wireguard
+* Xnip - screen capture
 
 ### hombrew (http://brew.sh/)
 
