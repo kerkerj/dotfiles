@@ -7,8 +7,14 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 # p10k - To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh  ]] || source ~/.p10k.zsh
 
-# powelevel10k
+# powerlevel10k
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# powerlevel10k to show k8s namespace
+typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_CONTENT_EXPANSION='$P9K_KUBECONTEXT_NAME:$P9K_KUBECONTEXT_NAMESPACE'
+typeset -g POWERLEVEL9K_KUBECONTEXT_PREFIX='('
+typeset -g POWERLEVEL9K_KUBECONTEXT_SUFFIX=')'
+typeset -g POWERLEVEL9K_KUBECONTEXT_VISUAL_IDENTIFIER_EXPANSION='⎈'
 
 # plugins
 plugins=(git ruby golang autojump terraform zsh-autosuggestions)

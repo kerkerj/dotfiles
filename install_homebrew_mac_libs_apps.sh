@@ -36,6 +36,7 @@ brew tap robscott/tap
 brew tap rs/tap
 brew tap vektra/tap
 brew tap ycd/tap
+brew tap superbrothers/zsh-kubectl-prompt 
 
 # then get selected libs or apps
 

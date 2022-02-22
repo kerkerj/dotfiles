@@ -53,6 +53,8 @@ kubectx
 k9s
 dty1er/tap/kubecolor
 robscott/tap/kube-capacity
+zsh-kubectl-prompt
+kube-ps1
 lazydocker
 minikube
 podman
