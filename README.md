@@ -216,6 +216,17 @@ Also see `mac_apps`
 
 See `mac_libs` and `mac_apps`
 
+## How to bind cmd-ctrl-Q from locking screen to start screensaver
+
+1. Make cmd-ctrl-Q unavailable:
+    System Preference -> Keyboard -> Choose App shortcuts in the left sidebar -> Add -> Menu title: `Lock Screen` -> Choose another shortcut to `sacrifice` (e.g. cmd-ctrl-alt-Q)
+2. Create a shortcut: 
+    Shortcut.app -> Add -> Search: start screensaver -> drag it to the left side -> open settings -> add keyboard shortcut -> done!
+
+ref: 
+- https://apple.stackexchange.com/a/323266
+- https://apple.stackexchange.com/a/430362
+
 ## Some references
 
 http://harrycode.logdown.com/tags/Vim
