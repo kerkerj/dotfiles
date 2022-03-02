@@ -77,7 +77,7 @@ go-swagger/go-swagger/go-swagger
 golangci/tap/golangci-lint
 goreleaser/tap/goreleaser
 reviewdog/tap/reviewdog
-vektra/tap/mockery
+mockery
 ------ GCP
 cloud_sql_proxy
 ------ databases

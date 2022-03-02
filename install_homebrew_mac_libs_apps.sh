@@ -34,7 +34,6 @@ brew tap pyroscope-io/brew
 brew tap reviewdog/tap
 brew tap robscott/tap
 brew tap rs/tap
-brew tap vektra/tap
 brew tap ycd/tap
 brew tap superbrothers/zsh-kubectl-prompt 
 
