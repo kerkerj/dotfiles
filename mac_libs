@@ -7,10 +7,6 @@ exa
 duf
 fd
 httpie
-git
-git-extras
-git-flow
-hub
 tig
 gnu-sed
 tldr
@@ -18,6 +14,12 @@ trash
 upx
 icdiff
 prettyping
+------ Git & GitHub
+git
+git-extras
+git-flow
+hub
+act
 ------ common cmd
 jq
 yq
@@ -78,6 +80,7 @@ golangci/tap/golangci-lint
 goreleaser/tap/goreleaser
 reviewdog/tap/reviewdog
 mockery
+sqlc
 ------ GCP
 cloud_sql_proxy
 ------ databases
